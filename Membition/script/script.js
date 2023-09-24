@@ -17,6 +17,7 @@ addEventListener("click", toggleUl);
 const article = document.getElementsByTagName('article')[0]
 const hamburger = document.querySelectorAll('.bx-menu')[0]
 const container = document.querySelectorAll('.container')[0]
+const sidebar = document.getElementsByTagName('sidebar')[0]
 console.log(container);
 function sidebarToggle(e) {
   
@@ -25,6 +26,8 @@ function sidebarToggle(e) {
     article.classList.toggle('article-show')
     container.classList.toggle('container-widthMax')
     container.classList.toggle('container-widthMin')
+    sidebar.classList.toggle('sidebar-2')
+
     article.style.overflowY = 'hidden'
     console.log('hello');
   }

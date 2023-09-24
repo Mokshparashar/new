@@ -188,6 +188,7 @@ article {
   margin-top: -4rem;
   position: relative;
   overflow-x: hidden;
+  z-index: -1;
  
 }
 /* width */
@@ -277,10 +278,12 @@ article::-webkit-scrollbar-thumb {
 /* container */
 .container {
   width: 80vw;
-  height: 90vh;
+  height: 80vh;
   border-radius: 10px;
   background-color: rgb(238, 242, 246);
+
 }
+
 
 .container-box {
   background-color: white;
@@ -466,5 +469,25 @@ sidebar i{
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  height: ;
+  margin: 1.4rem 0rem;
+  
+  
+}
+
+sidebar{
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+  position: absolute;
+  z-index: 555;
+  top: 4rem;
+  left: 1.5rem;
+  display: none;
+  overflow-y: scroll;
+}
+
+.sidebar-2{
+  display: flex;
 }
