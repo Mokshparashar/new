@@ -185,11 +185,10 @@ article {
   height: 80vh;
   width: 19vw;
   overflow-y: scroll;
-  margin-top: -4rem;
+
   position: relative;
   overflow-x: hidden;
-  z-index: -1;
- 
+  z-index: 1;
 }
 /* width */
 article::-webkit-scrollbar {
@@ -281,9 +280,7 @@ article::-webkit-scrollbar-thumb {
   height: 80vh;
   border-radius: 10px;
   background-color: rgb(238, 242, 246);
-
 }
-
 
 .container-box {
   background-color: white;
@@ -366,7 +363,7 @@ hr {
     height: fit-content;
   }
 }
-h4 i{
+h4 i {
   pointer-events: none;
 }
 
@@ -394,100 +391,111 @@ a:hover {
   margin-left: 10px;
 }
 
-
-.article-hide{
+.article-hide {
   animation: hide;
-  animation-duration: .2s;
+  animation-duration: 0.2s;
   animation-timing-function: linear;
   animation-fill-mode: forwards;
-
 }
 
-@keyframes hide{
-  0%{
+@keyframes hide {
+  0% {
     right: 0rem;
   }
-  100%{
+  100% {
     right: 20rem;
   }
 }
 
-.article-show{
+.article-show {
   animation: show;
-  animation-duration: .2s;
+  animation-duration: 0.2s;
   animation-timing-function: linear;
   animation-fill-mode: forwards;
-  
-
 }
 
-@keyframes show{
-  0%{
+@keyframes show {
+  0% {
     right: 20rem;
   }
-  100%{
+  100% {
     right: 0rem;
     overflow-y: scroll;
   }
 }
 
-
-.container-widthMax{
- 
- animation: containerMax .2s linear  forwards ;
+.container-widthMax {
+  animation: containerMax 0.2s linear forwards;
 }
 
-@keyframes containerMax{
-  0%{
+@keyframes containerMax {
+  0% {
     width: 80vw;
   }
 
-  100%{
-    width: 400vw;
+  100% {
+    width: 500vw;
   }
 }
 
-
-.container-widthMin{
-  
- animation: containerMin .2s linear  forwards ;
+.container-widthMin {
+  animation: containerMin 0.2s linear forwards;
 }
 
-@keyframes containerMin{
-  0%{
+@keyframes containerMin {
+  0% {
     width: 400vw;
   }
 
-  100%{
+  100% {
     width: 80vw;
   }
 }
 
-
-sidebar i{
+sidebar i {
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  margin: 1.4rem 0rem;
-  
-  
+  margin: 0.6rem 0rem;
+  color: rgb(41, 41, 41);
+  padding: 0.6rem 0.6rem;
+  border-radius: 5px;
+}
+sidebar i:hover {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin: 0.6rem 0rem;
+  color: rgb(41, 41, 41);
+
+  background-color: var(--lightblueviolet);
+  padding: 0.6rem 0.6rem;
+  border-radius: 5px;
+  color: var(--blueviolet);
+  cursor: pointer;
+  transition: all 0.2s;
 }
 
-sidebar{
-
-  display: flex;
+sidebar {
   align-items: center;
   justify-content: space-between;
   flex-direction: column;
   position: absolute;
-  z-index: 555;
+  z-index: 5;
   top: 4rem;
-  left: 1.5rem;
+  left: 1rem;
   display: none;
   overflow-y: scroll;
+  height: 80vh;
+  margin-top: 1rem;
 }
 
-.sidebar-2{
+sidebar::-webkit-scrollbar {
+  visibility: hidden;
+}
+
+.sidebar-2 {
   display: flex;
 }

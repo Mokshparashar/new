@@ -175,10 +175,13 @@ section {
 }
 
 article {
-  height: 80vh;
+ height: 80vh;
   width: 19vw;
   overflow-y: scroll;
-  margin-top: -2rem;
+
+  position: relative;
+  overflow-x: hidden;
+  z-index: 1;
 }
 /* width */
 article::-webkit-scrollbar {
@@ -272,8 +275,8 @@ article::-webkit-scrollbar-thumb {
 
 /* container */
 .container {
-  width: 80vw;
-  height: 90vh;
+   width: 80vw;
+  height: 80vh;
   border-radius: 10px;
   background-color: rgb(238, 242, 246);
   overflow-y: scroll;
@@ -856,3 +859,4 @@ button:hover, input[type="reset"]:hover {
   height: 13%;
   margin-top:35px;
 }
+
